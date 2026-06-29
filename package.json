@@ -1,0 +1,27 @@
+{
+  "name": "ontime",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "clean": "turbo clean && rm -rf node_modules",
+    "db:generate": "turbo db:generate --filter=@ontime/db",
+    "db:migrate": "turbo db:migrate --filter=@ontime/db",
+    "db:push": "turbo db:push --filter=@ontime/db",
+    "db:studio": "turbo db:studio --filter=@ontime/db",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

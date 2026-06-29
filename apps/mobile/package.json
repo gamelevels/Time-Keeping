@@ -1,0 +1,40 @@
+{
+  "name": "@ontime/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "build:preview": "eas build --profile preview",
+    "build:production": "eas build --profile production",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ontime/validators": "workspace:*",
+    "@trpc/client": "^11.0.0",
+    "@trpc/react-query": "^11.0.0",
+    "@trpc/server": "^11.0.0",
+    "@tanstack/react-query": "^5.66.3",
+    "expo": "~53.0.0",
+    "expo-constants": "~17.0.0",
+    "expo-router": "~4.0.0",
+    "expo-location": "~18.0.0",
+    "expo-secure-store": "~14.0.0",
+    "expo-task-manager": "~12.0.0",
+    "expo-notifications": "~0.29.0",
+    "expo-status-bar": "~2.0.0",
+    "react": "19.0.0",
+    "react-native": "0.79.0",
+    "react-native-mmkv": "^3.1.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@ontime/api": "workspace:*",
+    "@ontime/config": "workspace:*",
+    "@babel/core": "^7.25.0",
+    "@types/react": "~19.0.0",
+    "typescript": "^5.7.3"
+  }
+}
