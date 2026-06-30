@@ -27,8 +27,8 @@ build/
 .DS_Store
 Thumbs.db
 
-# Drizzle
-drizzle/
+# Drizzle generated output (intentionally tracked for deployment)
+# drizzle/
 
 # Logs
 *.log

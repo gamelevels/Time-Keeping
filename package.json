@@ -12,6 +12,7 @@
     "db:migrate": "turbo db:migrate --filter=@ontime/db",
     "db:push": "turbo db:push --filter=@ontime/db",
     "db:studio": "turbo db:studio --filter=@ontime/db",
+    "db:seed": "bun run scripts/seed.ts",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
   },
   "devDependencies": {

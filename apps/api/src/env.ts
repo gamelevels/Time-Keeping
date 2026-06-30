@@ -5,8 +5,10 @@ const envSchema = z.object({
   REDIS_URL: z.string().url().default('redis://localhost:6379'),
   BETTER_AUTH_SECRET: z.string().min(16),
   BETTER_AUTH_URL: z.string().url(),
+  PORT: z.coerce.number().optional(), // Railway injects this
   API_PORT: z.coerce.number().default(3001),
   API_HOST: z.string().default('0.0.0.0'),
+  CORS_ORIGIN: z.string().optional(), // e.g. https://ontime.example.com
   MINIO_ENDPOINT: z.string().default('localhost'),
   MINIO_PORT: z.coerce.number().default(9000),
   MINIO_USE_SSL: z.coerce.boolean().default(false),

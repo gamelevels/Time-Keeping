@@ -19,7 +19,7 @@ app.use(
     origin: [
       'http://localhost:3000',
       'http://localhost:19006',
-      ...(env.NODE_ENV === 'production' ? [] : []),
+      ...(env.CORS_ORIGIN ? env.CORS_ORIGIN.split(',').map((o) => o.trim()) : []),
     ],
     credentials: true,
     allowHeaders: ['Content-Type', 'Authorization'],
@@ -59,7 +59,7 @@ app.route('/api/gps', gpsRouter)
 // 404 fallback
 app.notFound((c) => c.json({ error: 'Not found' }, 404))
 
-const port = env.API_PORT
+const port = env.PORT ?? env.API_PORT
 const host = env.API_HOST
 
 console.log(`OnTime API starting on http://${host}:${port}`)
